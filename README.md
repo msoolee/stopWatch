@@ -1,2 +1,2 @@
 # stopWatch
-StopWatch minin javascript program
+StopWatch aplicattion with JavaScript ,HTML, CSS 
