@@ -1,0 +1,181 @@
+/* body  */
+body {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.fa-clock{
+    margin-right: 10px;
+}
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 300px;
+    min-width: 260px;
+}
+
+
+/* stopwatch */
+.stopwatch {
+    background-color: gainsboro;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    position: sticky; /* 추가 */
+    top: 20px;
+    z-index: 1000; /* 추가 */
+}
+
+#time{
+
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 8ch;
+    padding-left: 30px;
+}
+
+
+/* container */
+
+.records {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.button_container {
+    display: flex;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startStopBtn {
+    background-color: lightgreen;
+}
+
+#resetBtn {
+    background-color: lightcoral;
+}
+
+#lapBtn {
+    background-color: lightblue;
+}
+
+.records ul {
+    list-style: none;
+    padding: 0;
+}
+
+.records li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.recordTitle {
+    background-color: gainsboro;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    position: sticky; /* 추가 */
+    top: 170px; /* 추가, stopwatch의 높이보다 약간 더 높게 설정 */
+    z-index: 1000; /* 추가 */
+}
+
+.individual {
+    background-color: white;
+}
+
+.recordTitle, .individual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 버튼들을 왼쪽으로 정렬 */
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.individual h3 {
+    text-align: center;
+    width: 50%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.deleteAll {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.listButton {
+
+    background: none;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 24px;  /* 원형이 되도록 너비와 높이를 동일하게 설정 */
+    height: 24px; /* 원형이 되도록 너비와 높이를 동일하게 설정 */
+    border-radius: 50%; /* 원형 모양으로 만들기 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box; /* 패딩 및 보더를 포함한 크기 설정 */
+    padding: 0; /* 기본 패딩 제거 */
+    margin: 0; /* 기본 마진 제거 */
+}
+
+.listButton::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    display: none;
+}
+
+.listButton.checked::after {
+    display: block;
+}
+
+
+
